@@ -71,6 +71,8 @@ public class CalculatorTest {
     @Test
     public void should_CalculateFactorial_When_GivenPositiveNumber() {
         Assert.assertEquals(6, calculator.factorial(3));
+        Assert.assertEquals(1, calculator.factorial(-1));
+        Assert.assertEquals(1, calculator.factorial(1));
     }
 
     @Test
@@ -81,6 +83,7 @@ public class CalculatorTest {
     @Test
     public void should_FindGCD_When_GivenTwoNumbers() {
         Assert.assertEquals(6, calculator.findGCD(54,24));
+        Assert.assertEquals(54, calculator.findGCD(54,54));
     }
 
     @Test
@@ -97,5 +100,6 @@ public class CalculatorTest {
     public void should_ReturnFalse_When_NumberIsNotPrime() {
         Assert.assertFalse(calculator.isPrime(1));
         Assert.assertFalse(calculator.isPrime(16));
+        Assert.assertFalse(calculator.isPrime(4));
     }
 }
